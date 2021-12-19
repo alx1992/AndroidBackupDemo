@@ -1,0 +1,8 @@
+rootProject.name = "AndroidBackupDemo"
+include ':viewpagerdemo'
+include ':commonlib'
+include ':floatwindow'
+include ':camerademo'
+include ':launchmode'
+include ':voiceview'
+include ':mainentrance'

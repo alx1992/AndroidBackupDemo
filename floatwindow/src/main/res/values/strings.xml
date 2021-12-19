@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">floatwindow</string>
+    <string name="btn">启动</string>
+    <string name="tv">请求权限界面</string>
+</resources>
