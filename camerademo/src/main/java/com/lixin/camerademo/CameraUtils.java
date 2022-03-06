@@ -33,25 +33,26 @@ public class CameraUtils {
     /**
      * 全局上下文对象
      */
-    private  Context mContext;
+    @SuppressLint("StaticFieldLeak")
+    private  static Context mContext;
     /**
      *
      */
-    public  final int CAMERA_REQUEST_CODE = 10001;
+    public static  final int CAMERA_REQUEST_CODE = 10001;
     /**
      * 用于保存拍照图片的uri
      */
-    public   Uri mCameraUri;
+    public static  Uri mCameraUri;
 
     /**
      *  用于保存图片的文件路径，Android 10以下使用图片路径访问图片
      */
-    public   String mCameraImagePath;
+    public static  String mCameraImagePath;
 
     /**
      * 是否是Android 10以上手机
      */
-    public  boolean isAndroidQ = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q;
+    public  static boolean isAndroidQ = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q;
     /**
      * 私有化构造方法
      */
@@ -70,7 +71,7 @@ public class CameraUtils {
      * @param context
      * @return
      */
-    public  CameraUtils getInstance(Context context) {
+    public static CameraUtils getInstance(Context context) {
         mContext = context.getApplicationContext();
         return CameraUtilsHolder.INSTANCE;
     }
