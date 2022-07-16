@@ -80,6 +80,7 @@ public class CameraUtils {
     /**
      * 调起相机拍照
      */
+    @SuppressLint("QueryPermissionsNeeded")
     public void openCamera(Activity activity) {
         Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File photoFile = null;
