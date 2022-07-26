@@ -11,6 +11,9 @@ import com.blankj.utilcode.util.LogUtils;
 
 
 
+/**
+ * @author alx1992
+ */
 public class MyApplication extends Application {
     private static final String TAG = "MyApplication";
     @Override
@@ -27,7 +30,9 @@ public class MyApplication extends Application {
     ActivityLifecycleCallbacks lifecycleCallbacks = new ActivityLifecycleCallbacks() {
         @Override
         public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
-            LogUtils.eTag(TAG, "Activity TaskId: " + activity.getTaskId() + "\nActivity Name: " + activity.getLocalClassName() + "\nActivity: " + activity);
+            LogUtils.eTag(TAG, "Activity TaskId: " +
+                    activity.getTaskId() + "\nActivity Name: " +
+                    activity.getLocalClassName() + "\nActivity: " + activity);
         }
 
         @Override
@@ -57,7 +62,9 @@ public class MyApplication extends Application {
 
         @Override
         public void onActivityDestroyed(@NonNull Activity activity) {
-            LogUtils.eTag(TAG, "Activity TaskId: " + activity.getTaskId() + "\nActivity Name: " + activity.getLocalClassName() + "\nActivity: " + activity);
+            LogUtils.eTag(TAG, "Activity TaskId: " +
+                    activity.getTaskId() + "\nActivity Name: " +
+                    activity.getLocalClassName() + "\nActivity: " + activity);
         }
     };
 
