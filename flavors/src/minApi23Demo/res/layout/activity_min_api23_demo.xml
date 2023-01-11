@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <com.a.demo.CircleProgressView
+            android:id="@+id/cp_progress"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            app:backWidth="10dp"
+            app:progColor="#20AEFF"
+            app:backColor="#E6DBDBDB"
+            android:layout_centerInParent="true"
+            app:progWidth="10dp"
+            app:progress="1" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_85"
+            android:textColor="#ff4d4d4d"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tv_btn" />
+
+
+</RelativeLayout>

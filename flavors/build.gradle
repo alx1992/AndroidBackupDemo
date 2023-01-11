@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+
+        applicationId "com.a.demo"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    flavorDimensions "api", "mode"
+    productFlavors {
+        demo {
+            dimension "mode"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+        }
+
+        full {
+            dimension "mode"
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+        }
+
+        minApi24 {
+            dimension "api"
+            minSdkVersion 24
+            versionCode 30000 + android.defaultConfig.versionCode
+            versionNameSuffix "-minApi24"
+        }
+
+        minApi23 {
+            dimension "api"
+            minSdkVersion 23
+            versionCode 20000  + android.defaultConfig.versionCode
+            versionNameSuffix "-minApi23"
+        }
+
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':common')
+}

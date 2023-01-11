@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidXDemo">
         <activity android:name=".MainActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +23,9 @@
         </activity>
         <activity android:name=".RemoteViewActivity"
             android:launchMode="singleInstance" />
-        <service android:name=".service.FloatWindowService"></service>
-        <service android:name=".service.ForegroundService"></service>
+
+        <service android:name=".service.FloatWindowService" />
+        <service android:name=".service.ForegroundService" />
     </application>
 
 </manifest>

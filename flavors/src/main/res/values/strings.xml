@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">AndroidDemo</string>
+    <string name="txt_1">第二界面</string>
+    <string name="txt_2">第三界面</string>
+    <string name="txt_3">第四界面</string>
+    <string name="txt_0">跳转</string>
+    <string name="btn_api24_demo" tools:ignore="ExtraTranslation">minApi24Demo</string>
+    <string name="btn_api23_demo" tools:ignore="ExtraTranslation">minApi23Demo</string>
+    <string name="btn_api23_full" tools:ignore="ExtraTranslation">minApi23Full</string>
+    <string name="btn_api24_full" tools:ignore="ExtraTranslation">minApi24Full</string>
+    <string name="tv_85">1%</string>
+    <string name="tv_btn">开始下载</string>
+</resources>

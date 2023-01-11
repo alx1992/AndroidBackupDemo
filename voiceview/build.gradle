@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdk 32
+    buildToolsVersion '32.1.0 rc1'
 
     defaultConfig {
         applicationId "a.lixin.voiceview"
         minSdkVersion 17
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -30,16 +30,8 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
     //使用该方式依赖的库将会参与编译和打包，可以提供给外部访问。
-    api project(path: ':commonlib')
-    //工具类
-    implementation 'com.blankj:utilcodex:1.29.0'
+    implementation project(path: ':common')
+
 
 }

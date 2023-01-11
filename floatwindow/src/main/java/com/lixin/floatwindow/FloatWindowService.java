@@ -127,7 +127,7 @@ public class FloatWindowService extends Service {
     private void initWindow() {
         winManager = (WindowManager) getApplication().getSystemService(Context.WINDOW_SERVICE);
         //设置好悬浮窗的参数
-        wmParams = getParams();
+        wmParams = getParams1();
         // 悬浮窗默认显示以左上角为起始坐标
         wmParams.gravity = Gravity.LEFT | Gravity.TOP;
         //悬浮窗的开始位置，因为设置的是从左上角开始，所以屏幕左上角是x=0;y=0
@@ -141,7 +141,7 @@ public class FloatWindowService extends Service {
         winManager.addView(mFloatingLayout, wmParams);
     }
 
-    private WindowManager.LayoutParams getParams() {
+    private WindowManager.LayoutParams getParams1() {
         wmParams = new WindowManager.LayoutParams();
         //设置window type 下面变量2002是在屏幕区域显示，2003则可以显示在状态栏之上
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "32.1.0-rc1"
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api 'androidx.appcompat:appcompat:1.5.0'
+    api 'androidx.constraintlayout:constraintlayout:2.0.4'
+    api 'androidx.recyclerview:recyclerview:1.2.1'
+    api 'com.google.android.material:material:1.4.0'
+    //viewPager
+    api "androidx.viewpager2:viewpager2:1.0.0"
+
+    //BRVAH
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'
+
+    //butterknife
+    api 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    // rxjava2
+    api "io.reactivex.rxjava2:rxjava:2.2.3"
+    api "io.reactivex.rxjava2:rxandroid:2.1.0"
+    //retrofit
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    //RxLifecycle通过监听Activity、Fragment的生命周期，来自动断开...以防止内存泄漏。
+    api 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
+    api 'com.trello.rxlifecycle3:rxlifecycle-components:3.0.0'
+
+    //android 4.4以上沉浸式实现
+    // 基础依赖包，必须要依赖
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+
+    //eventbus
+    api 'org.greenrobot:eventbus:3.2.0'
+
+    // ViewModel and LiveData
+    api "android.arch.lifecycle:extensions:1.1.1"
+    // alternatively, just ViewModel
+    api "android.arch.lifecycle:viewmodel:1.1.1"
+    // alternatively, just LiveData
+    api "android.arch.lifecycle:livedata:1.1.1"
+    //工具类
+    api 'com.blankj:utilcodex:1.31.0'
+    //debug api，因为LeakCanary应该只在调试版本中运行。
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.2'
+    //权限申请
+    api 'com.guolindev.permissionx:permissionx:1.7.1'
+}

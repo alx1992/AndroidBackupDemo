@@ -34,5 +34,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     //使用该方式依赖的库将会参与编译和打包，可以提供给外部访问。
-    api project(path: ':commonlib')
+    api project(path: ':common')
 }

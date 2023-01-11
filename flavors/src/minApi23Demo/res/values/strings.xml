@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidDemo</string>
+    <string name="txt_1">第二界面</string>
+    <string name="txt_2">第三界面</string>
+    <string name="txt_3">第四界面</string>
+    <string name="txt_0">跳转</string>
+</resources>
